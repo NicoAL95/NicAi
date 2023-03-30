@@ -31,10 +31,10 @@ function sideOff(){
 }
 
 // Close navbar outside
-let menuRef = useRef();
+let menuRef = useRef<HTMLInputElement>(null);
 useEffect(() => {
   let handler = (e: { target: any; }) => {
-    if (!menuRef.current.contains(e.target)) {
+    if (!menuRef.current?.contains(e.target)) {
         const sidebar = document.getElementById("sidebar")
         sidebar?.classList.remove('border-r')
         sidebar?.classList.remove('border-white/20')

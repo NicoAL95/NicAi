@@ -34,7 +34,7 @@ export default async function handler(
       user: {
         _id: 'NicAi',
         name: 'NicAi',
-        avatar: "https://links.papareact.com/89k"
+        avatar: "/logo/nicai-logo.svg"
       }
     }
 

@@ -4,9 +4,9 @@ import Image from "next/image"
 
 function Login() {
   return (
-    <div className="bg-[#11A37F] h-screen flex flex-col items-center justify-center text-center">
+    <div className="bg-[#129AA3] h-screen flex flex-col items-center justify-center text-center">
         <Image
-            src="https://links.papareact.com/2i6"
+            src="/logo/nicai-logo.svg"
             width={300}
             height={300}
             alt="Logo"

@@ -1,13 +1,82 @@
+.react-scroll-to-bottom--css-wksqo-1tj0vk3 {
+    background-color: red !important
+}
+.react-scroll-to-bottom--css-wksqo-1tj0vk3:hover {
+    background-color: royalblue !important
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5a5a5a; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #838485; 
+}
+
+::-moz-selection { 
+/* Code for Firefox */
+    color: white;
+    background: #f81ce5;
+  }
+  
+  ::selection {
+    color: white;
+    background: #f81ce5;
+  }
+
+  /* Scroll Button */
+  
+  @-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(0.9); opacity: 0.7; }
+    50% { -webkit-transform: scale(1); opacity: 1; }
+    100% { -webkit-transform: scale(0.9); opacity: 0.7; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+#chatPulse > div > button {
+    background-color: #4b4b4b !important;
+    
+    -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out; 
+    -moz-animation: pulse 3s infinite ease-in-out; 
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* End Scroll Button */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components{
     .infoText{
-        @apply p-4  bg-gray-700/50 rounded-lg max-w-[300px]
+        @apply p-4  bg-[#222222] rounded-lg max-w-[300px] text-sm
     }
 
     .chatRow{
         @apply rounded-lg px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-gray-700/70 cursor-pointer text-gray-300 transition-all duration-200 ease-out
+    }
+
+    .react-scroll-to-bottom--css-munne-1tj0vk3{
+        @apply animate-pulse
     }
 }

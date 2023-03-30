@@ -67,8 +67,8 @@ function ChatInput({ chatId }: Props) {
     };
 
   return (
-    <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm focus:outline-none">
-        <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
+    <div className="bg-transparent p-5 text-gray-400 rounded-lg text-sm focus:outline-none">
+        <form onSubmit={sendMessage} className="bg-stone p-5 space-x-5 flex rounded-xl">
             <input className="bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300" 
             value={prompt} 
             type="text" 
@@ -79,15 +79,15 @@ function ChatInput({ chatId }: Props) {
             <button 
             disabled={!prompt || !session}
             type="submit"
-            className="bg-[#11A37F] disabled:cursor-not-allowed disabled:opacity-50 hover:opacity-50 text-white font-bold px-4 py-2 rounded" 
+            className="bg-[#129AA3] disabled:cursor-not-allowed disabled:opacity-50 hover:opacity-50 text-white font-bold px-4 py-2 rounded" 
             >
                 <PaperAirplaneIcon className="w-4 h-4 -rotate-45"/>
             </button>
         </form>
         <div>
             {/* Module Selection */}
-            <div className="md:hidden">
-                <ModelSelection/>
+            <div className={`${session?.user?.name == "Nico Abel Laia" ? 'md:hidden' : 'hidden'}`}>
+                <ModelSelection />
             </div>
         </div>
     </div>

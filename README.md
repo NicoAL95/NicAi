@@ -2,7 +2,7 @@
 ### Authorized by WeekGenz Front End Developer Nico Abel Laia
 ------------
 # Visit Live Official Website:
-www.nicai.vercel.app
+https://nicai.vercel.app/
 
 ###
 
